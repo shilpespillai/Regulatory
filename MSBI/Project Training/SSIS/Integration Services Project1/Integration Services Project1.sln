@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Integration Services Project1", "Integration Services Project1\Integration Services Project1.dtproj", "{E0F21280-8A79-43D4-97A4-FF2E0FB5E19E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+		PROD|Default = PROD|Default
+		UAT|Default = UAT|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0F21280-8A79-43D4-97A4-FF2E0FB5E19E}.Development|Default.ActiveCfg = Development
+		{E0F21280-8A79-43D4-97A4-FF2E0FB5E19E}.Development|Default.Build.0 = Development
+		{E0F21280-8A79-43D4-97A4-FF2E0FB5E19E}.PROD|Default.ActiveCfg = PROD
+		{E0F21280-8A79-43D4-97A4-FF2E0FB5E19E}.PROD|Default.Build.0 = PROD
+		{E0F21280-8A79-43D4-97A4-FF2E0FB5E19E}.UAT|Default.ActiveCfg = UAT
+		{E0F21280-8A79-43D4-97A4-FF2E0FB5E19E}.UAT|Default.Build.0 = UAT
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

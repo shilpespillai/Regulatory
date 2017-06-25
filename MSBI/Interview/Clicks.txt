@@ -1,0 +1,29 @@
+Query_id	Query Time	URL Position
+0000003a718649f2	schwab	2006-05-11 08:07:35	http://www.schwab.com/	1
+0000006d43b549c1	us geography	2006-05-04 14:23:00	http://www.enchantedlearning.com/usa/	3
+0000006d43b549c1	us geography	2006-05-04 14:23:03	http://www.sheppardsoftware.com/states_experiment_drag-drop_Intermed_State15s_500.html	4
+0000016aa52e4fbc	wwf	2006-05-21 09:25:34	http://www.panda.org/	2
+000002aa6e27443f	biggercity	2006-05-07 13:30:45	http://www.biggercity.com/chat/	1
+000005aac1f6423f	shawnee studios	2006-05-09 14:21:29	http://www.shawneestudios.com/contact_us.php	1
+000007697d5645ab	HARRYS FLOWERS ORLANDO	2006-05-19 05:06:33	http://search.msn.com/local/details.aspx?q=Harrys+Famous+Flowers&w=brandon%2c+florida&near=near&lat=28.537700&lon=-81.377300&display=Orlando,%20FL&id=YPhttp%3a%2f%2fpb.search.msn.com%2f1_4073668589_HarrysFamousFlowers&dn=Harrys+Famous+Flowers	5
+0000089ba6c4432f	concerts in orange county california	2006-05-01 13:17:50	http://www.orangecounty.net/html/visitor.html	1
+000008d8afaa459a	www.nfl.com	2006-05-28 18:22:39	http://www.nfl.com/teams/NYJ.html	7
+000009c2848e4a68	north hills school district	2006-05-04 12:29:12	http://www.nhsd.net/	1
+00000ddede104dbd	robinson high school illinois	2006-05-10 09:22:38	http://maroons.rob.crwfrd.k12.il.us/rhs/administration/index.html	3
+00000fb026034781	not ready to make nice video	2006-05-30 10:50:38	http://www.avclub.com/content/node/48548	2
+00000fb026034781	not ready to make nice video	2006-05-30 10:55:26	http://www.videocodezone.com/videos/d/dixie_chicks/not_ready_to_make_nice.html	1
+00001042aee34960	ruptured appendix	2006-05-01 01:17:20	http://www.appendix-resource.info/symptoms-charts%3a-ruptured-appendix.html	4
+00001042aee34960	ruptured appendix	2006-05-01 01:17:48	http://www.mayoclinic.com/health/appendicitis/DS00274	5
+000010d5b3694aee	dictionary	2006-05-24 10:26:23	http://www.dictionary.com/	1
+000013994f5c4388	Foster Wheeler Stock	2006-05-18 11:55:02	http://quote.morningstar.com/Quote.html?ticker=FWLT	1
+00001765443d47ac	Daniel Dipiero	2006-05-16 13:05:43	http://news.aol.com/nation/story/_a/cruise-ship-passenger-missing-off/n20060516124309990002?cid=505	8
+0000181c5a9548d3	www.consumerinfo.com	2006-05-22 14:52:33	http://www.consumerinfo.com/qhome-cgi/qhome.pl?00307126	4
+000018a0b1a64c98	SNAP DRAGON FLOWERS	2006-05-09 07:27:59	http://www.gardenersnet.com/flower/snapdragon.htm	1
+000019b266214b3a	SANTA ROSA PRESS	2006-05-26 06:06:41	http://search.msn.com/local/details.aspx?q=Press+Democrat&w=pleasanton%2c+california&near=near&lat=38.437600&lon=-122.712400&display=Santa%20Rosa,%20CA&id=YPhttp%3a%2f%2fpb.search.msn.com%2f1_7075757500_PressDemocrat&dn=Press+Democrat	3
+000019d804d444b9	target.com	2006-05-17 10:52:59	http://www.target.com/	1
+00001bac9ffe4def	threedaysgrace.com	2006-05-02 05:09:44	http://www.threedaysgrace.com/	1
+00001ce4f66241d2	msn groups	2006-05-25 09:13:16	http://groups.msn.com/	1
+00001dbba6da4686	adenovirus	2006-05-21 15:39:48	http://kidshealth.org/parent/infections/lung/adenovirus.html	2
+0deaa6ce191a4882	www.teenbrazil.com	2006-05-05 09:01:42	http://www.teenbrazil.com/32270882/tour.html	2
+
+0deaa6ce191a4882	www.teenbrazil.com	2006-05-05 09:01:46	http://www.teenbrazil.com/32270882/tour.html	2

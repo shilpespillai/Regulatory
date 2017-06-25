@@ -1,0 +1,1216 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/27/2017 4:11:15 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SHILPESH_SMRUTI"
+  DTS:CreatorName="SHILPESH_SMRUTI\smruti_shilpesh"
+  DTS:DTSID="{658154DD-682B-42B8-AE12-AC700C53BC5E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.4001.0"
+  DTS:LocaleID="18441"
+  DTS:ObjectName="File_Transfer"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{02B04776-5A2C-413D-AFC3-8A996F1FFEB8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_CUSTOMERS_SSIS]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="FF_CUSTOMERS_SSIS"
+      DTS:DTSID="{BD50C940-B512-4F77-A471-AAF1A30FDFD3}"
+      DTS:ObjectName="FF_CUSTOMERS_SSIS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="18441"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Documents\Edureka Projects\MSBI\Project Training\SSIS\FF_OUTPUT\FF_CUSTOMERS_SSIS.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="custId"
+              DTS:DTSID="{C55F9A9C-1559-44C5-B2CD-1DEBF1DF63B4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cname"
+              DTS:DTSID="{9108DC26-A48C-4F8A-A402-BB7786908923}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cage"
+              DTS:DTSID="{A1E3FDBE-EE76-402B-8F02-433BBD6AFDF2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbalance"
+              DTS:DTSID="{A503BA20-C943-46C6-BC3B-ABF21CB2EA92}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cmobile"
+              DTS:DTSID="{34644E85-32CD-489A-BBA0-414767365E6D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbranchid"
+              DTS:DTSID="{FC75F871-1B0B-4401-A107-4F085B90AE45}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ccity"
+              DTS:DTSID="{A0F8118C-1345-4B98-8FBD-DB38781941D9}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_DB_CONNECTION_SSIS]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="FF_DB_CONNECTION_SSIS"
+      DTS:DTSID="{452CC125-E149-492C-8301-44B63E845505}"
+      DTS:ObjectName="FF_DB_CONNECTION_SSIS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="18441"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Documents\Edureka Projects\MSBI\Project Training\SSIS\FF_OUTPUT\FF_CUSTOMERS_SSIS.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="custId"
+              DTS:DTSID="{13F6C605-D020-4769-9B8F-E5D18984DEEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cname"
+              DTS:DTSID="{B92D165E-F43A-4535-AA23-87CB62BA1C20}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cage"
+              DTS:DTSID="{654CBEB5-F202-4DA8-937E-7BD56323EA3D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbalance"
+              DTS:DTSID="{0B63193C-5606-492A-80FD-22B43110F3FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cmobile"
+              DTS:DTSID="{70C360CC-0F9D-485D-9DD6-68524071BAFF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbranchid"
+              DTS:DTSID="{15C783D4-4519-458C-BEE8-EA2BBB81337B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ccity"
+              DTS:DTSID="{FCA44D73-E6BB-4D36-9986-45ED90BCC861}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SHILPESH_SMRUTI.ETLCLASSES]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{BD2644E2-45FA-4925-B289-F851D3246ACF}"
+      DTS:ObjectName="SHILPESH_SMRUTI.ETLCLASSES">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=SHILPESH_SMRUTI;Initial Catalog=ETLCLASSES;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SHILPESH_SMRUTI.MYTARGET]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EAF7168A-233A-4C3C-8C9F-C2F96C793503}"
+      DTS:ObjectName="SHILPESH_SMRUTI.MYTARGET">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=SHILPESH_SMRUTI;Initial Catalog=MYTARGET;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DB_FF"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8BE52B78-6A22-46A8-88CE-3C73111E4B6A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DB_FF"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DB_FF\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="18441"
+              name="Flat File Destination">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DB_FF\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_CUSTOMERS_SSIS]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_CUSTOMERS_SSIS]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].Columns[custId]"
+                      cachedDataType="i4"
+                      cachedName="custId"
+                      externalMetadataColumnId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[custId]"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[custId]" />
+                    <inputColumn
+                      refId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].Columns[cname]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="cname"
+                      externalMetadataColumnId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[cname]"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[cname]" />
+                    <inputColumn
+                      refId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].Columns[cage]"
+                      cachedDataType="ui1"
+                      cachedName="cage"
+                      externalMetadataColumnId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[cage]"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[cage]" />
+                    <inputColumn
+                      refId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].Columns[cbalance]"
+                      cachedDataType="cy"
+                      cachedName="cbalance"
+                      externalMetadataColumnId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[cbalance]"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[cbalance]" />
+                    <inputColumn
+                      refId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].Columns[cmobile]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="cmobile"
+                      externalMetadataColumnId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[cmobile]"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[cmobile]" />
+                    <inputColumn
+                      refId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].Columns[cbranchid]"
+                      cachedDataType="i4"
+                      cachedName="cbranchid"
+                      externalMetadataColumnId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[cbranchid]"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[cbranchid]" />
+                    <inputColumn
+                      refId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].Columns[ccity]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="ccity"
+                      externalMetadataColumnId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ccity]"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[ccity]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[custId]"
+                      dataType="i4"
+                      name="custId" />
+                    <externalMetadataColumn
+                      refId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[cname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="cname" />
+                    <externalMetadataColumn
+                      refId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[cage]"
+                      dataType="ui1"
+                      name="cage" />
+                    <externalMetadataColumn
+                      refId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[cbalance]"
+                      dataType="cy"
+                      name="cbalance" />
+                    <externalMetadataColumn
+                      refId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[cmobile]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="cmobile" />
+                    <externalMetadataColumn
+                      refId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[cbranchid]"
+                      dataType="i4"
+                      name="cbranchid" />
+                    <externalMetadataColumn
+                      refId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ccity]"
+                      dataType="wstr"
+                      length="20"
+                      name="ccity" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\DB_FF\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[CUSTOMERS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DB_FF\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SHILPESH_SMRUTI.ETLCLASSES]"
+                  connectionManagerRefId="Package.ConnectionManagers[SHILPESH_SMRUTI.ETLCLASSES]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[custId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[custId]"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[custId]"
+                      name="custId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[cname]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[cname]"
+                      length="20"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[cname]"
+                      name="cname"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[cage]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[cage]"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[cage]"
+                      name="cage"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[cbalance]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[cbalance]"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[cbalance]"
+                      name="cbalance"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[cmobile]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[cmobile]"
+                      length="20"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[cmobile]"
+                      name="cmobile"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[cbranchid]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[cbranchid]"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[cbranchid]"
+                      name="cbranchid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[ccity]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ccity]"
+                      length="20"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].Columns[ccity]"
+                      name="ccity"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[custId]"
+                      dataType="i4"
+                      name="custId" />
+                    <externalMetadataColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[cname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="cname" />
+                    <externalMetadataColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[cage]"
+                      dataType="ui1"
+                      name="cage" />
+                    <externalMetadataColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[cbalance]"
+                      dataType="cy"
+                      name="cbalance" />
+                    <externalMetadataColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[cmobile]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="cmobile" />
+                    <externalMetadataColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[cbranchid]"
+                      dataType="i4"
+                      name="cbranchid" />
+                    <externalMetadataColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ccity]"
+                      dataType="wstr"
+                      length="20"
+                      name="ccity" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[custId]"
+                      dataType="i4"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[custId]"
+                      name="custId" />
+                    <outputColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cname]"
+                      name="cname" />
+                    <outputColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cage]"
+                      dataType="ui1"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cage]"
+                      name="cage" />
+                    <outputColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cbalance]"
+                      dataType="cy"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cbalance]"
+                      name="cbalance" />
+                    <outputColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cmobile]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cmobile]"
+                      name="cmobile" />
+                    <outputColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cbranchid]"
+                      dataType="i4"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cbranchid]"
+                      name="cbranchid" />
+                    <outputColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ccity]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ccity]"
+                      name="ccity" />
+                    <outputColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DB_FF.Paths[OLE DB Source Output]"
+              endId="Package\DB_FF\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\DB_FF\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\FF_DB"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E445DCA8-518A-4940-BA76-BA3E26B4C4C5}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FF_DB"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\FF_DB\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="18441"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FF_DB\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_DB_CONNECTION_SSIS]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_DB_CONNECTION_SSIS]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[custId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[custId]"
+                      length="50"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[custId]"
+                      name="custId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[cname]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cname]"
+                      length="50"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[cname]"
+                      name="cname"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[cage]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cage]"
+                      length="50"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[cage]"
+                      name="cage"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[cbalance]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cbalance]"
+                      length="50"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[cbalance]"
+                      name="cbalance"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[cmobile]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cmobile]"
+                      length="50"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[cmobile]"
+                      name="cmobile"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[cbranchid]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cbranchid]"
+                      length="50"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[cbranchid]"
+                      name="cbranchid"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[ccity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ccity]"
+                      length="50"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[ccity]"
+                      name="ccity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[custId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="custId" />
+                    <externalMetadataColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cname" />
+                    <externalMetadataColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cage]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cage" />
+                    <externalMetadataColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cbalance]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cbalance" />
+                    <externalMetadataColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cmobile]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cmobile" />
+                    <externalMetadataColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cbranchid]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cbranchid" />
+                    <externalMetadataColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ccity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ccity" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FF_DB\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[CUSTOMERS_TEST]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FF_DB\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SHILPESH_SMRUTI.MYTARGET]"
+                  connectionManagerRefId="Package.ConnectionManagers[SHILPESH_SMRUTI.MYTARGET]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[custId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="custId"
+                      externalMetadataColumnId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[custId]"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[custId]" />
+                    <inputColumn
+                      refId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cname]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cname"
+                      externalMetadataColumnId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cname]"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[cname]" />
+                    <inputColumn
+                      refId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cage]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cage"
+                      externalMetadataColumnId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cage]"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[cage]" />
+                    <inputColumn
+                      refId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cbalance]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cbalance"
+                      externalMetadataColumnId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cbalance]"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[cbalance]" />
+                    <inputColumn
+                      refId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cmobile]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cmobile"
+                      externalMetadataColumnId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cmobile]"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[cmobile]" />
+                    <inputColumn
+                      refId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ccity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ccity"
+                      externalMetadataColumnId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ccity]"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[ccity]" />
+                    <inputColumn
+                      refId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cbranchid]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cbranchid"
+                      externalMetadataColumnId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[branchid]"
+                      lineageId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output].Columns[cbranchid]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[custId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="custId" />
+                    <externalMetadataColumn
+                      refId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cname" />
+                    <externalMetadataColumn
+                      refId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cage]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cage" />
+                    <externalMetadataColumn
+                      refId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cbalance]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cbalance" />
+                    <externalMetadataColumn
+                      refId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cmobile]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cmobile" />
+                    <externalMetadataColumn
+                      refId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[branchid]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="branchid" />
+                    <externalMetadataColumn
+                      refId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ccity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ccity" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FF_DB\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FF_DB\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FF_DB\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FF_DB\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FF_DB\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\FF_DB.Paths[Flat File Source Output]"
+              endId="Package\FF_DB\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\FF_DB\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="109,42"
+          Id="Package\DB_FF"
+          TopLeft="82,41" />
+        <NodeLayout
+          Size="109,42"
+          Id="Package\FF_DB"
+          TopLeft="92,145" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DB_FF">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="172,42"
+          Id="Package\DB_FF\Flat File Destination"
+          TopLeft="308,355" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\DB_FF\OLE DB Source"
+          TopLeft="305,172" />
+        <EdgeLayout
+          Id="Package\DB_FF.Paths[OLE DB Source Output]"
+          TopLeft="380,214">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14,141"
+              Start="0,0"
+              End="14,133.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,66.5"
+                    Point2="0,70.5"
+                    Point3="4,70.5" />
+                  <mssgle:LineSegment
+                    End="10,70.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10,70.5"
+                    Point2="14,70.5"
+                    Point3="14,74.5" />
+                  <mssgle:LineSegment
+                    End="14,133.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DB_FF\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\FF_DB">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\FF_DB\OLE DB Destination"
+          TopLeft="270,296" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\FF_DB\Flat File Source"
+          TopLeft="261,87" />
+        <EdgeLayout
+          Id="Package\FF_DB.Paths[Flat File Source Output]"
+          TopLeft="336.5,129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19,167"
+              Start="0,0"
+              End="19,159.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,79.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,79.5"
+                    Point2="0,83.5"
+                    Point3="4,83.5" />
+                  <mssgle:LineSegment
+                    End="15,83.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15,83.5"
+                    Point2="19,83.5"
+                    Point3="19,87.5" />
+                  <mssgle:LineSegment
+                    End="19,159.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\FF_DB\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
