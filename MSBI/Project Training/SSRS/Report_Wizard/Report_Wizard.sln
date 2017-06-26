@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Report_Wizard", "Report_Wizard\Report_Wizard.rptproj", "{932C262D-4A9D-41D5-AECA-E4DB7CC75C11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{932C262D-4A9D-41D5-AECA-E4DB7CC75C11}.Debug|Default.ActiveCfg = Debug
+		{932C262D-4A9D-41D5-AECA-E4DB7CC75C11}.Debug|Default.Build.0 = Debug
+		{932C262D-4A9D-41D5-AECA-E4DB7CC75C11}.Debug|Default.Deploy.0 = Debug
+		{932C262D-4A9D-41D5-AECA-E4DB7CC75C11}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{932C262D-4A9D-41D5-AECA-E4DB7CC75C11}.DebugLocal|Default.Build.0 = DebugLocal
+		{932C262D-4A9D-41D5-AECA-E4DB7CC75C11}.Release|Default.ActiveCfg = Release
+		{932C262D-4A9D-41D5-AECA-E4DB7CC75C11}.Release|Default.Build.0 = Release
+		{932C262D-4A9D-41D5-AECA-E4DB7CC75C11}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

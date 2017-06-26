@@ -1,0 +1,491 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/27/2017 4:00:12 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SHILPESH_SMRUTI"
+  DTS:CreatorName="SHILPESH_SMRUTI\smruti_shilpesh"
+  DTS:Description="SSIS Package Description"
+  DTS:DTSID="{41A57C94-B143-4366-932A-778D1E3BAE0C}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.4001.0"
+  DTS:LocaleID="18441"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="Database_FlatFile"
+  DTS:VersionGUID="{A93CA881-4AEC-4A4B-A147-11575B232608}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionFlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E9C01FAE-5E5B-441F-B50B-BA1807330C8D}"
+      DTS:ObjectName="DestinationConnectionFlatFile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="18441"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Documents\Edureka Projects\MSBI\Project Training\SSIS\FF_OUTPUT\FF_CUSTOMERS.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="custId"
+              DTS:DTSID="{E39EDDE3-2324-4A7C-B310-1C995A9D1ED3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cname"
+              DTS:DTSID="{EFC8095A-FAAE-4A8B-9015-3C45FB22DE8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cage"
+              DTS:DTSID="{4A6B7617-4757-4F63-BC17-7BD044311A53}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="22"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbalance"
+              DTS:DTSID="{1C70AF53-8EA9-4BFF-970E-1CB4D3E5B7B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cmobile"
+              DTS:DTSID="{48862557-756B-470D-802D-9A56283121EC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbranchid"
+              DTS:DTSID="{A89D6463-C0BD-46DE-8160-787665562186}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ccity"
+              DTS:DTSID="{78166B4B-E686-4545-97DC-D91B5D4EFCF4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1E9A394E-6CA6-453D-893D-E94B2BACE7C4}"
+      DTS:ObjectName="SourceConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=ETLCLASSES;Provider=SQLNCLI10;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{993A742D-8F31-4069-8E5D-EF8E20CD7405}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="18441"
+              name="Destination - FF_CUSTOMERS_txt"
+              validateExternalMetadata="False">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionFlatFile]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionFlatFile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].Columns[custId]"
+                      cachedDataType="i4"
+                      cachedName="custId"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].ExternalColumns[custId]"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[custId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].Columns[cname]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="cname"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].ExternalColumns[cname]"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[cname]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].Columns[cage]"
+                      cachedDataType="ui1"
+                      cachedName="cage"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].ExternalColumns[cage]"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[cage]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].Columns[cbalance]"
+                      cachedDataType="cy"
+                      cachedName="cbalance"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].ExternalColumns[cbalance]"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[cbalance]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].Columns[cmobile]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="cmobile"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].ExternalColumns[cmobile]"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[cmobile]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].Columns[cbranchid]"
+                      cachedDataType="i4"
+                      cachedName="cbranchid"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].ExternalColumns[cbranchid]"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[cbranchid]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].Columns[ccity]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="ccity"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].ExternalColumns[ccity]"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[ccity]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].ExternalColumns[custId]"
+                      dataType="i4"
+                      name="custId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].ExternalColumns[cname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="cname" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].ExternalColumns[cage]"
+                      dataType="ui1"
+                      name="cage" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].ExternalColumns[cbalance]"
+                      dataType="cy"
+                      name="cbalance" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].ExternalColumns[cmobile]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="cmobile" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].ExternalColumns[cbranchid]"
+                      dataType="i4"
+                      name="cbranchid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input].ExternalColumns[ccity]"
+                      dataType="wstr"
+                      length="20"
+                      name="ccity" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - CUSTOMERS"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source - CUSTOMERS"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[CUSTOMERS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - CUSTOMERS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[custId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].ExternalColumns[custId]"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[custId]"
+                      name="custId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[cname]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].ExternalColumns[cname]"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[cname]"
+                      name="cname"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[cage]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].ExternalColumns[cage]"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[cage]"
+                      name="cage"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[cbalance]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].ExternalColumns[cbalance]"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[cbalance]"
+                      name="cbalance"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[cmobile]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].ExternalColumns[cmobile]"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[cmobile]"
+                      name="cmobile"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[cbranchid]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].ExternalColumns[cbranchid]"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[cbranchid]"
+                      name="cbranchid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[ccity]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].ExternalColumns[ccity]"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].Columns[ccity]"
+                      name="ccity"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].ExternalColumns[custId]"
+                      dataType="i4"
+                      name="custId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].ExternalColumns[cname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="cname" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].ExternalColumns[cage]"
+                      dataType="ui1"
+                      name="cage" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].ExternalColumns[cbalance]"
+                      dataType="cy"
+                      name="cbalance" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].ExternalColumns[cmobile]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="cmobile" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].ExternalColumns[cbranchid]"
+                      dataType="i4"
+                      name="cbranchid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output].ExternalColumns[ccity]"
+                      dataType="wstr"
+                      length="20"
+                      name="ccity" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[custId]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[custId]"
+                      name="custId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[cname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[cname]"
+                      name="cname" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[cage]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[cage]"
+                      name="cage" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[cbalance]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[cbalance]"
+                      name="cbalance" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[cmobile]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[cmobile]"
+                      name="cmobile" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[cbranchid]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[cbranchid]"
+                      name="cbranchid" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[ccity]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[ccity]"
+                      name="ccity" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task 1\Destination - FF_CUSTOMERS_txt.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task 1\Source - CUSTOMERS.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+</DTS:Executable>

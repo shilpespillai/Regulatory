@@ -1,0 +1,797 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/27/2017 4:20:07 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SHILPESH_SMRUTI"
+  DTS:CreatorName="SHILPESH_SMRUTI\smruti_shilpesh"
+  DTS:Description="SSIS Package Description"
+  DTS:DTSID="{8C3EEEE9-0FEA-46DB-A2B5-55CFA23FF778}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.4001.0"
+  DTS:LocaleID="18441"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="FlatFile_Database"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{C276F669-D46E-4704-A292-A43997D07B92}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9223603D-CFE7-4060-9F3F-09562B6F8D76}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=SHILPESH_SMRUTI;Initial Catalog=MYTARGET;Provider=SQLNCLI10;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8B858578-8D18-4568-A129-907E4C506408}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="18441"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Documents\Edureka Projects\MSBI\srfp20060501-20060531-queries\srfp20060501-20060531.queries.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Time"
+              DTS:DTSID="{84148361-453B-49DA-97D0-191439F19D5A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Query"
+              DTS:DTSID="{6F95CA55-56C1-4E6D-BADF-1318A678C838}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QueryID"
+              DTS:DTSID="{82919D0A-50A9-4A94-814F-CEDF1AA42206}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SessionID"
+              DTS:DTSID="{DFD00B02-6CBD-4D83-9741-22B979266925}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ResultCount"
+              DTS:DTSID="{580DDFD9-8346-429F-B85C-D217743D42B1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Interview_Task]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C2B21E75-761C-494C-92EF-99569198EC72}"
+      DTS:ObjectName="Interview_Task">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="18441"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Documents\Edureka Projects\MSBI\Interview\Queries.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Time"
+              DTS:DTSID="{69D11C38-A7C3-45F2-93D4-69888D4B0E53}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Query"
+              DTS:DTSID="{723A9DC1-494B-417A-8C80-32F22932315E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QueryID"
+              DTS:DTSID="{2473186F-17BF-4D3E-B4E0-FD07936D3798}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SessionID"
+              DTS:DTSID="{4908E176-B7B9-4A26-BC15-CDFBD1FD0AE1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ResultCount"
+              DTS:DTSID="{5EDEDD6A-C883-471A-BBAB-6E10042EB8B1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SHILPESH_SMRUTI.ETLCLASSES]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{34BF95C9-F409-4769-B103-752752ED0768}"
+      DTS:ObjectName="SHILPESH_SMRUTI.ETLCLASSES">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=SHILPESH_SMRUTI;Initial Catalog=ETLCLASSES;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F4699488-08D6-40E6-9823-46D316E4DEB3}"
+      DTS:ObjectName="SourceConnectionFlatFile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="18441"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Documents\Edureka Projects\MSBI\Project Training\SSIS\FF_INPUT\FF_CUSTOMERS_TEST.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="custId"
+              DTS:DTSID="{F9AF4908-4F24-4FAF-9EFD-56E82ED98F2B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cname"
+              DTS:DTSID="{A8FC3A2C-9C0A-411F-A25D-67753A594B05}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cage"
+              DTS:DTSID="{82914ED7-EC9D-4A62-82A8-5F6608473A0F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbalance"
+              DTS:DTSID="{BE7D3F62-40E9-4AB4-917D-807B73286469}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cmobile"
+              DTS:DTSID="{5CA6314C-834F-4C64-ACE9-9A2769BE3200}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbranchid"
+              DTS:DTSID="{AA4AD7E4-D1AF-4A08-ACBE-5EB5B31DCE25}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ccity"
+              DTS:DTSID="{9CC024DB-451D-4769-8EF7-F13605175C52}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Exe File Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DTSID="{27F003D9-40AE-4FAE-BA86-D4F81293C0D8}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Exe File Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Exe File Task\Destination - CUSTOMERS_TEST"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination - CUSTOMERS_TEST"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[CUSTOMERS_TEST]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].Columns[custId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="custId"
+                      externalMetadataColumnId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].ExternalColumns[custId]"
+                      lineageId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[custId]" />
+                    <inputColumn
+                      refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].Columns[cname]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cname"
+                      externalMetadataColumnId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].ExternalColumns[cname]"
+                      lineageId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[cname]" />
+                    <inputColumn
+                      refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].Columns[cage]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cage"
+                      externalMetadataColumnId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].ExternalColumns[cage]"
+                      lineageId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[cage]" />
+                    <inputColumn
+                      refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].Columns[cbalance]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cbalance"
+                      externalMetadataColumnId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].ExternalColumns[cbalance]"
+                      lineageId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[cbalance]" />
+                    <inputColumn
+                      refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].Columns[cmobile]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cmobile"
+                      externalMetadataColumnId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].ExternalColumns[cmobile]"
+                      lineageId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[cmobile]" />
+                    <inputColumn
+                      refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].Columns[ccity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ccity"
+                      externalMetadataColumnId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].ExternalColumns[ccity]"
+                      lineageId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[ccity]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].ExternalColumns[custId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="custId" />
+                    <externalMetadataColumn
+                      refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].ExternalColumns[cname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cname" />
+                    <externalMetadataColumn
+                      refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].ExternalColumns[cage]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cage" />
+                    <externalMetadataColumn
+                      refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].ExternalColumns[cbalance]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cbalance" />
+                    <externalMetadataColumn
+                      refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].ExternalColumns[cmobile]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cmobile" />
+                    <externalMetadataColumn
+                      refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].ExternalColumns[branchid]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="branchid" />
+                    <externalMetadataColumn
+                      refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input].ExternalColumns[ccity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ccity" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="18441"
+              name="Source - FF_CUSTOMERS_TEST_txt"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[custId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].ExternalColumns[custId]"
+                      length="50"
+                      lineageId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[custId]"
+                      name="custId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[cname]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].ExternalColumns[cname]"
+                      length="50"
+                      lineageId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[cname]"
+                      name="cname"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[cage]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].ExternalColumns[cage]"
+                      length="50"
+                      lineageId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[cage]"
+                      name="cage"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[cbalance]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].ExternalColumns[cbalance]"
+                      length="50"
+                      lineageId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[cbalance]"
+                      name="cbalance"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[cmobile]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].ExternalColumns[cmobile]"
+                      length="50"
+                      lineageId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[cmobile]"
+                      name="cmobile"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[cbranchid]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].ExternalColumns[cbranchid]"
+                      length="50"
+                      lineageId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[cbranchid]"
+                      name="cbranchid"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[ccity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].ExternalColumns[ccity]"
+                      length="50"
+                      lineageId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].Columns[ccity]"
+                      name="ccity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].ExternalColumns[custId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="custId" />
+                    <externalMetadataColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].ExternalColumns[cname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cname" />
+                    <externalMetadataColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].ExternalColumns[cage]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cage" />
+                    <externalMetadataColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].ExternalColumns[cbalance]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cbalance" />
+                    <externalMetadataColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].ExternalColumns[cmobile]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cmobile" />
+                    <externalMetadataColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].ExternalColumns[cbranchid]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cbranchid" />
+                    <externalMetadataColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output].ExternalColumns[ccity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ccity" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Exe File Task.Paths[Flat File Source Output]"
+              endId="Package\Exe File Task\Destination - CUSTOMERS_TEST.Inputs[Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="140,42"
+          Id="Package\Exe File Task"
+          TopLeft="83.5,38.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Exe File Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="247,42"
+          Id="Package\Exe File Task\Source - FF_CUSTOMERS_TEST_txt"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="233,42"
+          Id="Package\Exe File Task\Destination - CUSTOMERS_TEST"
+          TopLeft="12.5,107.5" />
+        <EdgeLayout
+          Id="Package\Exe File Task.Paths[Flat File Source Output]"
+          TopLeft="129,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
